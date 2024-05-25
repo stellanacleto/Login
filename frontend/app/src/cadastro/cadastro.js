@@ -3,6 +3,7 @@ import axios from 'axios';
 import './cadastro.css';
 import { Link } from 'react-router-dom';
 
+
 function Cadastro() {
     const [form, setForm] = useState({
         username: '',
@@ -55,23 +56,23 @@ function Cadastro() {
                     <div className="y2"><b>Cadastro</b></div>
                     <div className='user'>
                         <label className="y3">Usuário</label>
-                        <input type="text" name="username" value={form.username} onChange={handleChange} required />
+                        <input type="text" name="username" placeholder = "Digite seu nome de usuário" value={form.username} onChange={handleChange} required />
                     </div>
                     <div className='email'>
                         <label className="y9">E-mail</label>
-                        <input type="email" name="email" value={form.email} onChange={handleChange} required />
+                        <input type="email" name="email" placeholder = "@email.com" value={form.email} onChange={handleChange} required />
                     </div>
                     <div className='cpf'>
                         <label className="y6">CPF</label>
-                        <input type="text" name="cpf" value={form.cpf} onChange={handleChange} required />
+                        <input type="text" placeholder = "000.000.000-00" maxlength="14" pattern= "\d{3}\.\d{3}\.\d{3}-\d{2}" name="cpf" value={form.cpf} onChange={handleChange} required />
                     </div>
                     <div className='password'>
                         <label className="y4">Senha</label>
-                        <input type="password" name="password" value={form.password} onChange={handleChange} required />
+                        <input type="password" name="password" placeholder = "Digite sua senha" value={form.password} onChange={handleChange} required />
                     </div>
                     <div className='confirmPassword'>
                         <label className="y5">Confirmar senha</label>
-                        <input type="password" name="confirmPassword" value={form.confirmPassword} onChange={handleChange} required />
+                        <input type="password" name="confirmPassword" placeholder = "Repita a sua senha" value={form.confirmPassword} onChange={handleChange} required />
                         {error && <p className="error-message">{error}</p>}
                     </div>
                     <button type="submit" className="y7">Cadastre-se</button>
