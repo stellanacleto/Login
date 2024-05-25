@@ -56,7 +56,8 @@ function Login() {
                         <button type="submit" className="btn-login">Entrar</button>
                     <Link to="/cadastro" className="btn-login">Cadastre-se</Link>
                     </div>    
-                                           
+
+                    <Link to="/senha" className="y0">Esqueceu sua senha?</Link>            
                     </form>
             </div>
         </div>

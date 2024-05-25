@@ -12,6 +12,7 @@ function Cadastro() {
         confirmPassword: '',
        
     });
+
     const [error, setError] = useState('');
     const handleChange = (e) => {
         setForm({
